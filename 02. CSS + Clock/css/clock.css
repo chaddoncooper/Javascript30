@@ -27,6 +27,15 @@ html {
       inset 0 0 10px black,
       0 0 10px rgba(0,0,0,0.2);
   }
+  .dot {
+    background: #000;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    width: 6px;
+    height: 6px;
+    margin: auto 49%;
+  }
   .clock-face {
     position: relative;
     width: 100%;
