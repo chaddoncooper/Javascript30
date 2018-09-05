@@ -7,17 +7,8 @@ window.addEventListener("keyup", e => {
   if (pressedKeys.length > konamiCode.length) {
     pressedKeys.shift();
 
-    if (arraysEqual(konamiCode, pressedKeys)) {
-      window.alert("Konami Code :)");
+    if (pressedKeys.join('') === konamiCode.join('')) {
+        window.alert("Konami Code :)");
     }
   }
 });
-
-function arraysEqual(arr1, arr2) {
-  if (arr1.length !== arr2.length) return false;
-  for (var i = arr1.length; i--; ) {
-    if (arr1[i] !== arr2[i]) return false;
-  }
-
-  return true;
-}
