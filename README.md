@@ -1,4 +1,5 @@
-# Javascript drumkit
+# Javascript 30 Course
+[Course Website](https://javascript30.com/)
 
 ## Helpful development links
 
