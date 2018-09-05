@@ -4,7 +4,7 @@ let konamiCode = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
 window.addEventListener("keyup", e => {
   pressedKeys.push(e.keyCode);
 
-  if (pressedKeys.length >= 11) {
+  if (pressedKeys.length > konamiCode.length) {
     pressedKeys.shift();
 
     if (arraysEqual(konamiCode, pressedKeys)) {
