@@ -1,0 +1,22 @@
+html,
+body {
+    margin: 0;
+    font-size: 12px;
+}
+
+#controls {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    padding: 1em;
+    border-bottom: 1px dashed #000;
+    background-color: lightgray;
+    display: flex;
+}
+
+.control {
+    padding-right: 1em;
+}
+
+.control input {
+    text-transform: uppercase;
+}
