@@ -1,5 +1,5 @@
 # Javascript 30 Course
-![Build Status](https://ci.cnetms.info/buildStatus/icon?job=Javascript30)
+[![Build Status](https://ci.cnetms.info/buildStatus/icon?job=Javascript30)](https://ci.cnetms.info/job/Javascript30)
 
 [Live Demos](https://chaddoncooper.co.uk/javascript30)  
 [Course Website](https://javascript30.com/)
