@@ -14,31 +14,39 @@
             background-color: #2A2B2E;
             color: #FFF;
         }
-        body a {
+
+        a {
             text-decoration: none;
+        }
+
+        a:link,
+        a:visited {
+            color: #FFF;
+        }
+
+        a:hover {
+            color: #E1E1E3;
         }
 
         header {
             padding: 1em;
             background-color: #5A5A66;
-            color: #FFF;
+
         }
 
-        section header {
+        section div.title {
             background-color: #B4B4B9;
-            padding: 0 0 0.5em 0.5em;
-            
+            padding: 0.5em 1.5em;
+
         }
 
-        section header h2 {
+        section div.title h2 {
             margin: 0 0 0 0;
         }
 
-        section div.exercises {
-            
+        section div.exercise p {
+            padding: 0 2em;
         }
-
-        h1 {}
     </style>
 </head>
 
@@ -49,12 +57,22 @@
     <section>
         <div class="exercises">
             <div class="exercise">
-                <a href="01. Drum Kit/">
-                    <header>
+                <div class="title"><a href="01. Drum Kit/">
                         <h2>Drum Kit</h2>
-                    </header>
-                </a>
-                <p>A drum kit controlled using the keyboard</p>
+                    </a></div>
+                <p>A drum kit controlled using the keyboard.</p>
+            </div>
+            <div class="exercise">
+                <div class="title"> <a href="02. CSS + Clock/">
+                        <h2>CSS Clock</h2>
+                    </a></div>
+                <p>A Clock made with Javascript and CSS.</p>
+            </div>
+            <div class="exercise">
+                <div class="title"> <a href="03. CSS Variables and JS/">
+                        <h2>CSS Variables and JS</h2>
+                    </a></div>
+                <p>A CSS variable and JS example which manipulates and image.</p>
             </div>
         </div>
     </section>
