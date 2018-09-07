@@ -55,28 +55,36 @@
         <h1>Javascript 30 Exercises</h1>
     </header>
     <section>
-        <div class="exercises">
-            <div class="exercise">
-                <div class="title"><a href="01. Drum Kit/">
-                        <h2>Drum Kit</h2>
-                    </a></div>
-                <p>A drum kit controlled using the keyboard.</p>
-            </div>
-            <div class="exercise">
-                <div class="title"> <a href="02. CSS + Clock/">
-                        <h2>CSS Clock</h2>
-                    </a></div>
-                <p>A Clock made with Javascript and CSS.</p>
-            </div>
-            <div class="exercise">
-                <div class="title"> <a href="03. CSS Variables and JS/">
-                        <h2>CSS Variables and JS</h2>
-                    </a></div>
-                <p>A CSS variable and JS example which manipulates and image.</p>
-            </div>
+        <div id="exercises">
         </div>
     </section>
+
+
     <footer></footer>
+    <script>
+        const exercises = [
+            { title: 'Drum Kit', description: 'A drum kit controlled using the keyboard.', link: '01. Drum Kit/', },
+            { title: 'CSS Clock', description: 'A Clock made with Javascript and CSS.', link: '02. CSS + Clock/', },
+            { title: 'CSS Variables and JS', description: 'A CSS variable and JS example which manipulates and image.', link: '03. CSS Variables and JS/', },
+            { title: 'Array Cardio Day 1', description: 'Demonstrates popular array methods.', link: '04. Array Cardio Day 1/', },
+            { title: 'Flex Panels Image Gallery', description: 'A responsive image gallery.', link: '05. Flex Panels Image Gallery/', },
+            { title: 'Typeahead', description: 'Demonstrates typeahead with a list of American cities and states', link: '06. Type Ahead/', },
+            { title: 'Array Cardio Day 2', description: 'More array method demonstrations.', link: '07. Array Cardio Day 2/', },
+            { title: 'Fun with HTML 5 Canvas', description: 'Drawing tool using HTML canvas', link: '08. Fun with HTML 5 Canvas/', },
+            { title: 'Konami Code', description: 'Shows a popup when the konami code is entered', link: '12. Konami Code/', }
+        ];
+
+        document.querySelector('#exercises').innerHTML = exercises.map(exercise => {
+                return `
+                <div class="exercise">
+                    <div class="title"><a href="${exercise.link}">
+                            <h2>${exercise.title}</h2>
+                        </a></div>
+                    <p>${exercise.description}</p>
+                </div>
+            `;            
+        }).join('');
+    </script>
 </body>
 
 </html>
