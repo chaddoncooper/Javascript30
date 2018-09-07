@@ -1,18 +1,15 @@
 let pressedKeys = [];
-let konamiCode =
-  "ArrowUp ArrowUp ArrowDown ArrowDown ArrowLeft ArrowRight ArrowLeft ArrowRight b a";
+let konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
 
-window.addEventListener("keyup", e => {
+window.addEventListener('keyup', e => {
   pressedKeys.push(e.key);
-
-  let konamiCodeLength = konamiCode.split(" ").length;
   
   pressedKeys.splice(
-    -konamiCodeLength - 1,
-    pressedKeys.length - konamiCodeLength
+    -konamiCode.length - 1,
+    pressedKeys.length - konamiCode.length
   );
 
-  if (pressedKeys.join(' ').includes(konamiCode)) {
-    window.alert("Konami Code :)");
+  if (pressedKeys.join('') === konamiCode.join('')) {
+    window.alert('Konami Code :)');
   }
 });
