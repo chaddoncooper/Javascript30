@@ -1,5 +1,5 @@
 # Javascript 30 Course
-[Live Demos](https://chaddoncooper.co.uk/javascript30)
+[Live Demos](https://chaddoncooper.co.uk/javascript30)  
 [Course Website](https://javascript30.com/)
 
 ## Helpful development links
