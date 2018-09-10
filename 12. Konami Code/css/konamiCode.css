@@ -1,0 +1,39 @@
+body,html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url("img/background.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 100vh;
+    flex-wrap: wrap;
+}
+
+.button {
+    height: 10%;
+    
+}
+.up-arrow {
+    transform: rotate(0deg);
+}
+
+.right-arrow {
+    transform: rotate(90deg);
+}
+
+.down-arrow {
+    transform: rotate(180deg);
+}
+
+.left-arrow {
+    transform: rotate(270deg);
+}
