@@ -1,42 +1,59 @@
-const addItems = document.querySelector('.add-items');
-const itemsList = document.querySelector('.plates');
-const items = JSON.parse(localStorage.getItem('items')) || [];
+const addItems = document.querySelector(".add-items");
+const itemsList = document.querySelector(".plates");
+const items = JSON.parse(localStorage.getItem("items")) || [];
 
 function addItem(e) {
-    e.preventDefault();
-    const text = (this.querySelector('[name=item')).value;
-    const item = {
-        text,
-        done: false
-    };
-    items.push(item);
-    populateList(items, itemsList);
-    localStorage.setItem('items', JSON.stringify(items));
-    this.reset();
+  e.preventDefault();
+  const text = this.querySelector("[name=item").value;
+  const item = {
+    text,
+    done: false
+  };
+  items.push(item);
+  populateList(items, itemsList);
+  localStorage.setItem("items", JSON.stringify(items));
+  this.reset();
 }
 
 function populateList(plates = [], platesList) {
-    platesList.innerHTML = plates.map((plate, i) => {
-        return `
+  platesList.innerHTML = plates
+    .map((plate, i) => {
+      return `
           <li>
-            <input type="checkbox" data-index=${i} id="item${i}" ${plate.done ? 'checked' : ''} />
+            <input type="checkbox" data-index=${i} id="item${i}" ${
+        plate.done ? "checked" : ""
+      } />
             <label for="item${i}">${plate.text}</label>
           </li>
         `;
-      }).join('');
+    })
+    .join("");
 }
 
 function toggleDone(e) {
-    const el = e.target;
-    if (!el.matches('input')) return;
-    const index = el.dataset.index;
-    items[index].done = !items[index].done;
-    localStorage.setItem('items', JSON.stringify(items));
-    populateList(items, itemsList);
+  const el = e.target;
+  if (!el.matches("input")) return;
+  const index = el.dataset.index;
+  items[index].done = !items[index].done;
+  localStorage.setItem("items", JSON.stringify(items));
+  populateList(items, itemsList);
 }
 
-addItems.addEventListener('submit', addItem);
+function removeItem(e) {
+  const el = e.target;
+  if (!el.matches("label")) return;
+  const index = el.control.dataset.index;
+  items.splice(index, 1);
+  localStorage.setItem("items", JSON.stringify(items));
+  populateList(items, itemsList);
+}
+
+addItems.addEventListener("submit", addItem);
 // Delegate listens to clicks on the parent
-itemsList.addEventListener('click', toggleDone);
+itemsList.addEventListener("click", toggleDone);
+itemsList.addEventListener("contextmenu", e => {
+  e.preventDefault();
+  removeItem(e);
+});
 
 populateList(items, itemsList);
